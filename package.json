@@ -3,6 +3,9 @@
   "name": "five-mics",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "v10.16.0"
+  },
   "scripts": {
     "dev": "next -p 3012",
     "build": "next build",

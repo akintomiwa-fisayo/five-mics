@@ -48,7 +48,7 @@ class Header extends React.Component {
           />
 
           <meta charSet="utf-8" />
-          <title>Lamps And Images</title>
+          <title>Fivemics Empire</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta name="description" content="Collaboration for change" />
 
