@@ -1,10 +1,10 @@
 {
-  "homepage": "http://akintomiwa-fisayo.github.io/lampsAndImages",
-  "name": "lampsAndImages",
+  "homepage": "http://akintomiwa-fisayo.github.io/five-mics",
+  "name": "five-mics",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next -p 3010",
+    "dev": "next -p 3012",
     "build": "next build",
     "start": "next start -p $PORT",
     "export": "next export -o build",
@@ -16,6 +16,7 @@
     "axios": "^0.19.2",
     "es6-promise": "^4.2.8",
     "gh-pages": "^2.2.0",
+    "jquery": "^3.5.1",
     "next": "9.3.5",
     "next-redux-wrapper": "^6.0.2",
     "node-sass": "^4.13.1",
@@ -37,7 +38,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.1",
-    "less": "^3.11.3",
+    "less": "^2.7.3",
     "less-loader": "^6.1.1",
     "style-loader": "^1.2.1"
   }

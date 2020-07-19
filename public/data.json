@@ -1,0 +1,101 @@
+{
+  "Projects" : [
+    {
+      "title": "Adron Homes Radio Mixdown",
+      "src": "/projects/adron_homes_radio_mixdown.mp3",
+      "type":"audio"
+    },
+    {
+      "title": "AXA MANSARD Switching jobs radio Mixdown",
+      "src": "/projects/axa_mansard_switching_jobs_radio_mixdown.mp3",
+      "type":"audio"
+    },
+    {
+      "title": "Bigi Chapman Rev 21th July Mixdown",
+      "src": "/projects/bigi_chapman_rev_21th_july_mixdown.mp3",
+      "type":"audio"
+    },
+    {
+      "title": "Bonus Hausa Jingle 30secs Mixdown",
+      "src": "/projects/bonus_hausa_jingle_30secs_mixdown.mp3",
+      "type":"audio"
+    },
+    {
+      "title": "Castrol Magnatec Oil Pidgin Radio Mixdown",
+      "src": "/projects/castrol_magnatec_oil_pidgin_radio_mixdown.mp3",
+      "type":"audio"
+    },
+    {
+      "title": "FCMB 329# jingle Mixdown",
+      "src": "/projects/fcmb_329_jingle_mixdown.mp3",
+      "type":"audio"
+    },
+    {
+      "title": "Halogen Reveal",
+      "src": "/projects/halogen_reveal.mp4",
+      "type":"video"
+    },
+    {
+      "title": "Goldern Morn Puffs",
+      "src": "/projects/gm_puffs.mp3",
+      "type":"audio"
+    },
+    {
+      "title": "Maggi Consumer Promo",
+      "src": "/projects/maggi_consumer_promo.mp4",
+      "type":"video"
+    },
+    {
+      "title": "Pay Attitude Song",
+      "src": "/projects/pay_attitude_song.mp3",
+      "type":"audio"
+    },
+    {
+      "title": "Renmoney radio  45 secs",
+      "src": "/projects/renmoney_radio_45_secs.mp3",
+      "type":"audio"
+    },
+    {
+      "title": "Startime 2 For 2 Promo",
+      "src": "/projects/startime_2_for_2_promo.mp4",
+      "type":"video"
+    },
+    {
+      "title": "Sure paddy Igbo",
+      "src": "/projects/sure_paddy_igbo.mp3",
+      "type":"audio"
+    },
+    {
+      "title": "Nestle Abaji Documentary",
+      "src": "/projects/nestle_abaji_documentary.mp4",
+      "type":"video"
+    },
+    {
+      "title": "Apc Valentine Ad",
+      "src": "/projects/apc_valentine_ad.mp4",
+      "type":"video"
+    },
+    {
+      "title": "FCMB EPL 2018.mp4",
+      "src": "/projects/fcmb_epl_2018.mp4",
+      "type":"video"
+    },
+    {
+      "title": "LADY AND THE GENERAL",
+      "src": "/projects/lady_and_the_genral.mp4",
+      "type":"video"
+    }
+  ],
+  "Clients":[
+    "/images/clients/axa.jpg",
+    "/images/clients/castrol.png",
+    "/images/clients/dangote.png",
+    "/images/clients/fcmb.png",
+    "/images/clients/nestle.png",
+    "/images/clients/pay_attitude.png",
+    "/images/clients/polaris.png",
+    "/images/clients/renmoney.jpg",
+    "/images/clients/rite.png",
+    "/images/clients/sterling.png"
+  ]
+}

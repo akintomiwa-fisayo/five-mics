@@ -1,70 +1,91 @@
-/* eslint-disable react/no-danger */
 import React from 'react';
-import Link from 'next/link';
 
 class Footer extends React.Component {
   render() {
     return (
-      <>
-        <footer>
-          <div className="content container">
-            <div className="column">
-              <h4>Lamps ANd Images</h4>
-              <p>
-                Do non amet proident eiusmod magna et. Anim ipsum aliquip reprehenderit est in incididunt sit. Sit do eu labore irure. Dolor laboris commodo ea ad labore repr
-
-              </p>
+      <footer>
+        <div className="content">
+          <div className="info">
+            <div className="header">
+              <p>navigation</p>
             </div>
+            <div className="content">
+              <a href="#whatWeDo" className="link">
+                <li>fivemics Empire</li>
+              </a>
+              <br />
 
-            <div className="column">
-              <h4>Quick Links</h4>
-              <p className="link">
-                <Link href="/"><a>Home</a></Link>
-              </p>
-              <p className="link">
-                <Link href="/"><a>Rental catalogue</a></Link>
-              </p>
-              <p className="link">
-                <Link href="/"><a>About</a></Link>
-              </p>
-              <p className="link">
-                <Link href="/"><a>Latest work</a></Link>
-              </p>
-              <p className="link">
-                <Link href="/"><a>Contact</a></Link>
-              </p>
-            </div>
+              <a href="#ourWorks" className="link">
+                <li>our works</li>
+              </a>
+              <br />
 
-            <div className="column">
-              <h4>Stay in touch</h4>
-              <div className="infos">
-                <div className="info">
-                  <span className="icon-map-marker icon" />
-                  <span>The address to the company's physical location</span>
-                </div>
-                <div className="info">
-                  <span className="icon-envelope icon" />
-                  <span>Info@lapmsAndImages.com</span>
-                </div>
-                <div className="info">
-                  <span className="icon-telephone icon" />
-                  <span>090673248798</span>
-                </div>
-              </div>
-              <div className="social">
-                <span className="fa fa-facebook-square" />
-                <span className="fa fa-linkedin-square" />
-                <span className="fa fa-twitter-square" />
-                <span className="fa fa-instagram" />
-              </div>
+              <a href="#workedWith" className="link">
+                <li>our clients</li>
+              </a>
+              <br />
+
+              <a href="#contactUs" className="link">
+                <li>contact us</li>
+              </a>
             </div>
           </div>
-          <p className="copy-right">copyright &copy; 2020 Lamps  And Images</p>
-        </footer>
-        {/*  <a href="#top" className="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
-          <span alt="Icon" className="icon bg-white" data-inject-svg />
-        </a> */}
-      </>
+
+          <div className="info">
+            <div className="header">
+              <p>contact</p>
+            </div>
+            <div className="content">
+              <div className="detail">
+                <p>M —  </p>
+                <p> info@gmail.com</p>
+              </div>
+
+              <div className="detail">
+                <p>A —  </p>
+                <p> company's address comes here</p>
+              </div>
+
+              <div className="detail">
+                <p>P —  </p>
+                <p> +2337868997868</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="info">
+            <div className="header">
+              <p>social</p>
+            </div>
+            <div className="content">
+              <div className="detail">
+                <span className="fa fa-facebook-f" />
+              </div>
+
+              <div className="detail">
+                <span className="fa fa-twitter" />
+              </div>
+
+              <div className="detail">
+                <span className="fa fa-pinterest-p" />
+              </div>
+
+              <div className="detail">
+                <span className="fa fa-instagram" />
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <p>© 2020 Fivemics Empire.</p>
+          <p>All Rights Reserved.</p>
+        </div>
+
+      </footer>
     );
   }
 }

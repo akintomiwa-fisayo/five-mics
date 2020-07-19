@@ -1,165 +1,173 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable no-constant-condition */
+/* eslint-disable no-labels */
+/* eslint-disable no-restricted-syntax */
 import React from 'react';
 import { connect } from 'react-redux';
-import Link from 'next/link';
 import Layout from '../components/general/Layout';
-import { getCordinates } from '../lib/custom';
-import { updateHeader, updateSocialHeader } from '../redux/settings/action';
-import SlideShow from '../components/SlideShow';
+import { Projects, Clients } from '../public/data.json';
+import SlideShow from '../components/slideShow/SlideShow';
+import FormInput from '../components/general/FormInput';
 
-class Index extends React.Component {
+class Home extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      equipment: 0,
+      activeSlide: false,
+    };
 
-    this.banner = null;
-    this.onScroll = this.onScroll.bind(this);
+    this.equipments = [
+      'commercial',
+      'documentary',
+      'Narration',
+      'commentary',
+    ];
   }
 
   componentDidMount() {
-    // this.onScroll();
-    // window.addEventListener('scroll', this.onScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.onScroll);
-    this.props.updateHeader({
-      fixed: false,
-      fixedTop: 0,
-    });
-  }
-
-  onScroll() {
-    if (this.banner) {
-      const { $ } = window;
-      const bannerHeight = $('#banner').height();
-      const socialHeaderHeight = $('#socialHeader').outerHeight();
-      const headerHeight = this.props.settings.header.height;
-      const bannerPositionTop = getCordinates(this.banner).top;
-      const socialHeaderPositionTop = getCordinates(this.banner).top;
-      console.log(socialHeaderPositionTop, '||', socialHeaderHeight);
-      this.props.updateHeader({
-        fixed: $('html')[0].scrollTop < socialHeaderHeight,
-        fixedTop: socialHeaderHeight,
-      });
-    }
+    setInterval(() => {
+      let { equipment } = this.state;
+      equipment++;
+      if (equipment >= this.equipments.length) {
+        equipment = 0;
+      }
+      this.setState(() => ({
+        equipment,
+      }));
+    }, 2000);
   }
 
   render() {
+    const { state, props } = this;
+    const { header } = props.settings;
+    const headerHeight = header.height;
     return (
-      <Layout>
-        <div id="homePage">
-          <div className="featuring container">
-            <h2 className="uppercase">DRAMA | Deadwater Fell - Channel 4</h2>
-            <p>We provided the full camera & grip package to this Channel 4 & Kudos drama shooting in and around Glasgow.</p>
-          </div>
-          <div id="banner" ref={(e) => { this.banner = e; }}>
-            <SlideShow
-              items={[
-                {
-                  label: 'Education',
-                  content: <img
-                    src="/img/innovation-3.jpg"
-                    alt="martfury"
-                  />,
-                },
-                {
-                  label: 'Health',
-                  content: <img
-                    src="/img/innovation-2.jpg"
-                    alt="martfury"
-                  />,
-                },
-                {
-                  label: 'Agriculture',
-                  content: <img
-                    src="/img/innovation-4.jpg"
-                    alt="martfury"
-                  />,
-                },
-              ]}
-            />
-          </div>
-
-          <div className="container">
-
-            <div className="featured-board row">
-              <div className="col-lg-2 published">
-                <div>
-                  <h5>Published</h5>
-                </div>
-                <p>10 / 12 / 2019</p>
-              </div>
-
-              <div className="col-lg-7 details">
-                <div>
-                  <h2 className="uppercase">Deadwater Fell - Channel 4/Kudos</h2>
-                </div>
-                <p>
-                  <b>Director: Lynsey Miller</b>
-
-                </p>
-                <p>
-                  <b>Producer: Caroline Levy</b>
-
-                </p>
-                <p>
-                  <b>Line Producer: Matthew Brown</b>
-
-                </p>
-                <p>
-                  <b>DOP: Neus Ollé</b>
-
-                </p>
-
-                <p>This was our first foray into major long form drama in Scotland and went without a hitch. Initial testing and prep happened at our Manchester HQ with further testing up in Scotland pre shoot. It was such a pleasure to work with Neus again after working across shorter projects a few years previous. Her attitude to her work, vision for the project and general personality were uplifting to be around and it was a real joy to meet up with all crew after wrap for a bit of a knees up.
-                </p>
-
-                <p> <b> Equipment supplied: </b>
-                  2x Arri Alexa Mini and TLS Rehoused Canon K35 & FD Lenses
-                </p>
-
-                <a href="https://www.channel4.com/press/news/deadwater-fell-first-look-images-released">https://www.channel4.com/press/news/deadwater-fell-first-look-images-released</a>
-
-                <iframe src="https://www.youtube.com/embed/yEQsLSfl8gA" frameBorder="0" width="560" height="315" />
-              </div>
-
-              <div className="col-lg-3 more-work">
-                <div>
-                  <h4>MORE WORK</h4>
-
-                </div>
-                <div className="works">
-                  <div className="work">
-                    <p className="date">10 / 12 / 2019</p>
-                    <h5 className="title">
-                      <a href="/"> DRAMA | Cold Call - Channel 5 </a>
-                    </h5>
-                    <img className="preview" src="/img/work 1.jpg" alt="" />
-
+      <>
+        <Layout>
+          <div id="mainContent" align="center" data-page="Home">
+            <div className="banner">
+              <img loop muted src="/images/banner.jpg" className="parallax-bk" alt="" />
+              <div className="overlay">
+                <section className="content">
+                  <p className="bold">GET A VOICE OVER ARTIST FOR EVERY KIND OF PROJECT AND ALL USE CASE</p>
+                </section>
+                <section>
+                  <div id="ourSpecialties" className="bold">
+                    <p className="item active">{this.equipments[state.equipment]}</p>
                   </div>
-
-                  <div className="work">
-                    <p className="date">10 / 12 / 2019</p>
-                    <h5 className="title">
-                      <a href="/"> DRAMA | Cold Call - Channel 5 </a>
-                    </h5>
-                    <img className="preview" src="/img/work 2.jpg" alt="" />
-
-                  </div>
-                </div>
+                  <p className="">you name it</p>
+                </section>
               </div>
             </div>
 
-          </div>
-        </div>
+            <div id="bridge">
+              <div id="whatWeDo" style={{ paddingTop: headerHeight }}>
+                <h1 className="head">About Fivemics Empire</h1>
+                <div className="content">
+                  FIVEMICS EMPIRE is a digital media content production company that provides interesting content and integrated marketing solutions that speaks to Entertainment and Marketing communication. We are definitely your courier for endless creative media services and content.
+                  Our specialties cover areas of Concept development, Radio Commercials, Radio Jingle, Graphic Design, 3d visualization, Tv Commercials,Video Editing, post production services, Motion graphics, Architectural visualization, Virtual reality, Corporate giftings  and much more.
 
-      </Layout>
+                  <p>
+                    With a strong philosophy for uniqueness, FIVE MICS EMPIRE delivers  top notch solutions for a vast scope of fields . We are committed to timely execution of ideas with speed and creative fidelity.
+                  </p>
+                </div>
+
+              </div>
+
+              <div id="ourWorks" style={{ paddingTop: headerHeight }}>
+                <h1 className="head">Our works</h1>
+                <div id="projects">
+                  {Projects.map((project, i) => (
+                    <div className="project" onClick={() => { this.setState({ activeSlide: i }); }}>
+                      <div className="preview">
+                        {(() => {
+                          switch (project.type) {
+                            case ('video'): {
+                              return (
+                                <video
+                                // controls
+                                  className="item"
+                                  src={project.src}
+                                  alt=""
+                                />
+                              );
+                            }
+                            default: {
+                              return (
+                                <img
+                                  className="item audio"
+                                  src={project.src}
+                                  alt=""
+                                />
+                              );
+                            }
+                          }
+                        })()}
+                        <span className="icon fa fa-play-circle" />
+                      </div>
+                      <h5 className="label">{project.title}</h5>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+
+            <div id="workedWith" style={{ paddingTop: 'headerHeight' }}>
+              <h2 className="head">We've worked with</h2>
+              <div id="clients">
+                {Clients.map((client) => <img src={client} className="client" />)}
+              </div>
+            </div>
+
+            <div id="contactUs">
+              <img src="/images/fabric.jpg" alt="" className="bk" />
+              <div className="content">
+                <div className="top">
+                  <h1 className="head">Get In Touch</h1>
+                  <i>We would love to hear from you </i>
+                </div>
+
+                <FormInput
+                  label="Email"
+                  placeholder="input email"
+                  // value="the man"
+                />
+                <FormInput
+                  type="textarea"
+                  label="Message"
+                  placeholder="input message"
+                  // value="the man"
+                />
+                <button type="button" className="btn btn-success">Submit</button>
+              </div>
+            </div>
+          </div>
+        </Layout>
+        {state.activeSlide !== false ? (
+          <SlideShow
+            {...props}
+            start={state.activeSlide}
+            items={
+              Projects.map((project) => ({
+                label: project.title,
+                content: project.src,
+                type: project.type,
+              }))
+            }
+            onClose={() => {
+              this.setState({ activeSlide: false });
+            }}
+          />
+        ) : ''}
+      </>
     );
   }
 }
 
-const mapStateToProps = (state) => ({ settings: state.settings });
-const mapDispatchToProps = (dispatch) => ({
-  updateHeader: (props) => dispatch(updateHeader(props)),
-  updateSocialHeader: (props) => dispatch(updateSocialHeader(props)),
+const mapStateToProps = (state) => ({
+  settings: state.settings,
 });
-export default connect(mapStateToProps, mapDispatchToProps)(Index);
+
+export default connect(mapStateToProps)(Home);

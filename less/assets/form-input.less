@@ -1,4 +1,7 @@
 // out: false
+
+@padding: 1em;
+
 .form-input {
   position: relative;
   margin-bottom: 1.2em;
@@ -9,22 +12,31 @@
   
   .form-input-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
     
     .form-input-label {
       font-weight: 700;
       font-size: 1em;
       white-space: nowrap;
-      padding-right: .7em;
+      padding: @padding;
     }
     
     .form-input-field {
-      padding: .5em 0;
+      padding: @padding;
       width: 100%;
       border: none;
       outline: none;
-      color: #8b8b8b;
+      // color: #8b8b8b;
+      border: solid 2px #eeeeee;
+      transition: border-color 150ms ease-in;
+      border-radius: @padding;
+
+      &:focus{
+        border-color: @element-focus-color;
+
+      }
     }
   }
 
@@ -34,7 +46,7 @@
     bottom: 0;
     width: 100%;
     left: auto;
-    border-bottom: solid 2px #eeeeee;
+    // border-bottom: solid 2px #eeeeee;
   }
   
   .form-input-focus-ruler{
@@ -46,7 +58,7 @@
   
   &.focused{
     .form-input-focus-ruler{
-      width: 100%;
+      // width: 100%;
     }
   }
 }

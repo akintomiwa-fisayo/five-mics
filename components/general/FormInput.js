@@ -37,7 +37,7 @@ class FormInput extends React.Component {
   }
 
   render() {
-    const { state } = this;
+    const { state, props } = this;
     const {
       label, value, className, type,
     } = this.props;
@@ -57,15 +57,31 @@ class FormInput extends React.Component {
       <div className={`form-input${extraClasses}`}>
         <div className="form-input-container">
           <span className="form-input-label">{label}</span>
-          <input
-            type={type}
-            className="form-input-field"
-            value={value || state.value}
-            onChange={this.onChange}
-            onKeyDown={this.onKeyDown}
-            onFocus={this.onFocus}
-            onBlur={this.onBlur}
-          />
+          {type === 'textarea'
+            ? (
+              <textarea
+                type={type}
+                className="form-input-field"
+                value={value || state.value}
+                placeholder={props.placeholder}
+                onChange={this.onChange}
+                onKeyDown={this.onKeyDown}
+                onFocus={this.onFocus}
+                onBlur={this.onBlur}
+              />
+            )
+            : (
+              <input
+                type={type}
+                className="form-input-field"
+                placeholder={props.placeholder}
+                value={value || state.value}
+                onChange={this.onChange}
+                onKeyDown={this.onKeyDown}
+                onFocus={this.onFocus}
+                onBlur={this.onBlur}
+              />
+            )}
         </div>
         <div className="form-input-ruler" />
         <div className="form-input-focus-ruler" />
@@ -80,6 +96,7 @@ FormInput.propTypes = {
   onBlur: PropTypes.func,
   onKeyEnter: PropTypes.func,
   value: PropTypes.string,
+  placeholder: PropTypes.string,
   className: PropTypes.string,
   type: PropTypes.string,
 };
@@ -91,6 +108,7 @@ FormInput.defaultProps = {
   onKeyEnter: () => {},
   value: '',
   className: '',
+  placeholder: '',
   type: 'text',
 };
 

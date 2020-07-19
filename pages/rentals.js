@@ -28,94 +28,107 @@ class Index extends React.Component {
 
             <div className="featured-board row">
               <div id="works" className="col-lg-9 details">
-                <div className="work">
-                  <div className="info">
-                    <div className="about">
-                      <h5 className="title uppercase">cameras</h5>
-                      <p>Digital film cameras from Arri, RED & Sony.</p>
+                <Link href="/rentals/[category]" as="/rentals/cameras">
+                  <a className="work">
+                    <div className="info">
+                      <div className="about">
+                        <h5 className="title uppercase">cameras</h5>
+                        <p>Digital film cameras from Arri, RED & Sony.</p>
+                      </div>
+
+                      <button className="btn btn-primary"> VIEW RANGE {">"}</button>
                     </div>
 
-                    <button className="btn btn-primary"> VIEW RANGE ></button>
-                  </div>
+                    <div className="preview">
+                      <img src="/img/cam-1.jpg" alt="" />
+                    </div>
+                  </a>
+                </Link>
 
-                  <div className="preview">
-                    <img src="/img/cam-1.jpg" alt="" />
-                  </div>
-                </div>
+                <Link href="/rentals/[category]" as="/rentals/cameras">
+                  <a className="work">
+                    <div className="info">
+                      <div className="about">
+                        <h5 className="title uppercase">Camera Accessories</h5>
+                        <p>Matte Boxes, Follow Focuses and Lens Control Systems.</p>
+                      </div>
 
-                <div className="work">
-                  <div className="info">
-                    <div className="about">
-                      <h5 className="title uppercase">Camera Accessories</h5>
-                      <p>Matte Boxes, Follow Focuses and Lens Control Systems.</p>
-                                          </div>
-
-                    <button className="btn btn-primary"> VIEW RANGE ></button>
-                  </div>
-
-                  <div className="preview">
-                    <img src="/img/cam-1.jpg" alt="" />
-                  </div>
-                </div>
-
-                <div className="work">
-                  <div className="info">
-                    <div className="about">
-                      <h5 className="title uppercase">Anamorphic lenses</h5>
-                      <p>Anamorphic lenses from Cooke &amp;  Kowa</p>
-                                          </div>
-
-                    <button className="btn btn-primary"> VIEW RANGE ></button>
-                  </div>
-
-                  <div className="preview">
-                    <img src="/img/cam-1.jpg" alt="" />
-                  </div>
-                </div>
-
-                <div className="work">
-                  <div className="info">
-                    <div className="about">
-                      <h5 className="title uppercase">Prime Lenses</h5>
-                      <p>Largest selection of Vintage &amp; Modern glass outside of London. We stock sets of primes and rare individual lenses from Arri, Zeiss, Cooke, Leitz &amp; Canon.</p>                    </div>
-
-                    <button className="btn btn-primary"> VIEW RANGE ></button>
-                  </div>
-
-                  <div className="preview">
-                    <img src="/img/cam-1.jpg" alt="" />
-                  </div>
-                </div>
-
-                <div className="work">
-                  <div className="info">
-                    <div className="about">
-                      <h5 className="title uppercase">Zoom Lenses</h5>
-                      <p>Zoom lenses from Arri, Angenieux, Nikon & Cooke.</p>
+                      <button className="btn btn-primary"> VIEW RANGE {">"}</button>
                     </div>
 
-                    <button className="btn btn-primary"> VIEW RANGE ></button>
-                  </div>
+                    <div className="preview">
+                      <img src="/img/cam-1.jpg"
+                       alt="" />
+                    </div>
+                  </a>
+                </Link>
 
-                  <div className="preview">
-                    <img src="/img/cam-1.jpg" alt="" />
-                  </div>
-                </div>
+                <Link href="/rentals/[category]" as="/rentals/cameras">
+                  <a className="work">
+                    <div className="info">
+                      <div className="about">
+                        <h5 className="title uppercase">Anamorphic lenses</h5>
+                        <p>Anamorphic lenses from Cooke &amp;  Kowa</p>
+                      </div>
 
-                <div className="work">
-                  <div className="info">
-                    <div className="about">
-                      <h5 className="title uppercase">Playback / DIT</h5>
-                      <p>Bespoke systems for on set Playback & Digital Image Processing.</p>
+                      <button className="btn btn-primary"> VIEW RANGE ></button>
                     </div>
 
-                    <button className="btn btn-primary"> VIEW RANGE ></button>
-                  </div>
+                    <div className="preview">
+                      <img src="/img/cam-1.jpg" alt="" />
+                    </div>
+                  </a>
+                </Link>
 
-                  <div className="preview">
-                    <img src="/img/cam-1.jpg" alt="" />
-                  </div>
-                </div>
+                <Link href="/rentals/[category]" as="/rentals/cameras">
+                  <a className="work">
+                    <div className="info">
+                      <div className="about">
+                        <h5 className="title uppercase">Prime Lenses</h5>
+                        <p>Largest selection of Vintage &amp; Modern glass outside of London. We stock sets of primes and rare individual lenses from Arri, Zeiss, Cooke, Leitz &amp; Canon.</p>                    </div>
+
+                      <button className="btn btn-primary"> VIEW RANGE ></button>
+                    </div>
+
+                    <div className="preview">
+                      <img src="/img/cam-1.jpg" alt="" />
+                    </div>
+                  </a>
+                </Link>
+
+                <Link href="/rentals/[category]" as="/rentals/cameras">
+                  <a className="work">
+                    <div className="info">
+                      <div className="about">
+                        <h5 className="title uppercase">Zoom Lenses</h5>
+                        <p>Zoom lenses from Arri, Angenieux, Nikon & Cooke.</p>
+                      </div>
+
+                      <button className="btn btn-primary"> VIEW RANGE ></button>
+                    </div>
+
+                    <div className="preview">
+                      <img src="/img/cam-1.jpg" alt="" />
+                    </div>
+                  </a>
+                </Link>
+
+                <Link href="/rentals/[category]" as="/rentals/cameras">
+                  <a className="work">
+                    <div className="info">
+                      <div className="about">
+                        <h5 className="title uppercase">Playback / DIT</h5>
+                        <p>Bespoke systems for on set Playback & Digital Image Processing.</p>
+                      </div>
+
+                      <button className="btn btn-primary"> VIEW RANGE ></button>
+                    </div>
+
+                    <div className="preview">
+                      <img src="/img/cam-1.jpg" alt="" />
+                    </div>
+                  </a>
+                </Link>
 
               </div>
 
@@ -125,28 +138,32 @@ class Index extends React.Component {
                 </div>
 
                 <div className="sections">
-                  <Link href="/">
+                  <Link href="/rentals/[category]" as="/rentals/cameras">
                     <a className="section">Cameras</a>
                   </Link>
-                  <Link href="/">
+
+                  <Link href="/rentals/[category]" as="/rentals/cameras">
                     <a className="section">Cameras Accessories</a>
                   </Link>
-                  <Link href="/">
+
+                  <Link href="/rentals/[category]" as="/rentals/cameras">
                     <a className="section">Anamorphic lenses</a>
                   </Link>
-                  <Link href="/">
+
+                  <Link href="/rentals/[category]" as="/rentals/cameras">
                     <a className="section">Prime Lenses</a>
                   </Link>
-                  <Link href="/">
+
+                  <Link href="/rentals/[category]" as="/rentals/cameras">
                     <a className="section">Zoom Lenses</a>
                   </Link>
-                  <Link href="/">
+                  
+                  <Link href="/rentals/[category]" as="/rentals/cameras">
                     <a className="section">Playback / DIT</a>
                   </Link>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
 
